@@ -1,3 +1,10 @@
+Configurazione progetto
+-----------------------
+
+-> Target Build x64
+
+-> Creare main.cpp
+
 Proprietà Progetto
 -> Configuration settings
 	-> C/C++
@@ -20,5 +27,3 @@ Proprietà Progetto
 -> Copiare SDL2/lib/x64/SDL2.dll nella main root del progetto (dove c'è main.cpp)
 
 -> main.cpp -> #include "SDL.h"
-
--> Target Build x64
