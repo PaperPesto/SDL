@@ -1,4 +1,6 @@
 ﻿  Game.cpp
-  TextureManager.cpp
+C:\Projects\SDL\DrawingTextures\DrawingTextures\GameObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  GameObject.cpp
+C:\Projects\SDL\DrawingTextures\DrawingTextures\GameObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Generating Code...
   DrawingTextures.vcxproj -> C:\Projects\SDL\DrawingTextures\x64\Debug\DrawingTextures.exe
