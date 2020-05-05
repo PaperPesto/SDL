@@ -1,5 +1,2 @@
-﻿  Game.cpp
-C:\Projects\SDL\GameEngine\GameEngine\GameObject.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  main.cpp
-  Generating Code...
+﻿  Map.cpp
   GameEngine.vcxproj -> C:\Projects\SDL\GameEngine\x64\Debug\GameEngine.exe

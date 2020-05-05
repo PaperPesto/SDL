@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 
 	game = new Game();
 
-	game->init("BirchEngine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 640, false);	// La risoluzione deve essere un multiplo del tileSize = 32
+	game->init("GameEngine", 800, 640, false);	// La risoluzione deve essere un multiplo del tileSize = 32
 
 	while (game->running()) {
 
