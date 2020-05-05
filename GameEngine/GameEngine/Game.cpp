@@ -1,6 +1,11 @@
 #include "SDL.h"
 #include "Game.h"
+#include "TextureManager.h"
+#include "GameObject.h"
 #include <iostream>
+
+GameObject* player;
+GameObject* enemy;
 
 Game::Game() {}
 Game::~Game() {}
@@ -31,6 +36,9 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	else {
 		isRunning = false;
 	}
+
+	player = new GameObject("assets/player.png", renderer, 0, 0);
+	enemy = new GameObject("assets/enemy.png", renderer, 50, 50);
 }
 
 void Game::handleEvents() {
@@ -48,11 +56,19 @@ void Game::handleEvents() {
 
 void Game::update() {
 	cnt++;
+
+	player->Update();
+	enemy->Update();
+
 	std::cout << cnt << std::endl;
 }
 
 void Game::render() {
 	SDL_RenderClear(renderer);
+
+	player->Render();
+	enemy->Render();
+
 	SDL_RenderPresent(renderer);
 }
 
