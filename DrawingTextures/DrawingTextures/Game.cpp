@@ -57,8 +57,7 @@ void Game::update() {
 	cnt++;
 	destR.h = 64;
 	destR.w = 64;
-	destR.x = cnt/16;
-	destR.y = cnt / 32;
+	destR.x = cnt;
 
 	std::cout << cnt << std::endl;
 }
