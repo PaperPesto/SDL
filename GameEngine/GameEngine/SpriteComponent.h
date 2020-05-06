@@ -22,7 +22,6 @@ public:
 	}
 
 	void init() override {
-		std::cout << "Sprite init" << std::endl;
 		position = &entity->getComponent<PositionComponent>();
 
 		srcRect.x = srcRect.y = 0;
@@ -31,13 +30,11 @@ public:
 	}
 
 	void update() override {
-		std::cout << "Sprite update" << std::endl;
 		destRect.x = position->x();
 		destRect.y = position->y();
 	}
 
 	void draw() override {
-		std::cout << "x: " << destRect.x << std::endl;
 		TextureManager::Draw(texture, srcRect, destRect);
 	}
 };
