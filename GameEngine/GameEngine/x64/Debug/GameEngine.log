@@ -1,3 +1,0 @@
-﻿  Game.cpp
-C:\Projects\SDL\GameEngine\GameEngine\TransformComponent.h(20,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  GameEngine.vcxproj -> C:\Projects\SDL\GameEngine\x64\Debug\GameEngine.exe
