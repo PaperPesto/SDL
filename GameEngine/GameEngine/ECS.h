@@ -7,6 +7,10 @@
 #include<bitset>
 #include<array>
 
+// Implementazione nell'header quando si hanno
+// 1 - template
+// 2 - inline keyword
+
 class Component;
 
 class Entity;
@@ -50,7 +54,6 @@ private:
 
 public:
 	void update() {
-		std::cout << "Update on entity" << std::endl;
 		for (auto& c : components) c->update();	// auto& usato per rendere read-only gli oggetti nei cicli
 	}
 
