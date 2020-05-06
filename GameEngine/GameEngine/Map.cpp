@@ -2,12 +2,6 @@
 #include "Game.h"
 #include <fstream>
 
-/*
-	0 water
-	1 grass
-	2 dirt
-*/
-
 Map::Map() {}
 
 Map::~Map() {}
