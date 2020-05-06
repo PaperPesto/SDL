@@ -42,7 +42,7 @@ public:
 
 class Entity {
 private:
-	bool active = false;
+	bool active = true;
 	std::vector<std::unique_ptr<Component>> components;
 
 	ComponentArray componentArray;
@@ -50,11 +50,14 @@ private:
 
 public:
 	void update() {
-		for (auto& c : components) c->update();
+		std::cout << "Update on entity" << std::endl;
+		for (auto& c : components) c->update();	// auto& usato per rendere read-only gli oggetti nei cicli
+	}
+
+	void draw() {
 		for (auto& c : components) c->draw();
 	}
 
-	void draw() {}
 	bool isActive() const { return active; }
 	void destroy() { active = false; }
 
