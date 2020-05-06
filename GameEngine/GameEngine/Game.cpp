@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Map.h"
 #include "Components.h"
+#include "Vector2D.h"
 
 Map* map;
 
@@ -46,7 +47,7 @@ void Game::init(const char* title, int width, int height, bool fullscreen)
 
 	// ECS implementation
 
-	player.addComponent<PositionComponent>();
+	player.addComponent<TransformComponent>();
 	player.addComponent<SpriteComponent>("assets/player.png");
 }
 
@@ -69,8 +70,10 @@ void Game::update() {
 
 	manager.refresh();
 	manager.update();
+	//std::cout << player.getComponent<TransformComponent>().
+	player.getComponent<TransformComponent>().position.Add(Vector2D(0,0.1f));	// Ad ogni ciclo aggiunge un vettore (5,0)
 
-	if (player.getComponent<PositionComponent>().x() > 100) {
+	if (player.getComponent<TransformComponent>().position.x > 100) {
 		player.getComponent<SpriteComponent>().setTex("assets/enemy.png");
 	}
 }
