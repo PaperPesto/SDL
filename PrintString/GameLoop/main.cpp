@@ -21,7 +21,11 @@ int main(int argc, char* argv[]) {
 
     SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
 
-    SDL_RenderCopy(renderer, texture, NULL, NULL);
+    SDL_Rect* rectDest = new SDL_Rect();
+    rectDest->h = 100;
+    rectDest->w = 200;
+
+    SDL_RenderCopy(renderer, texture, NULL, rectDest);
     SDL_RenderPresent(renderer);
 
     while (!quit)
