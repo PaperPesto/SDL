@@ -12,13 +12,16 @@ private:
 
 public:
 	SpriteComponent() = default;
+
 	SpriteComponent(const char* path) {
 		// loading textures
 		setTex(path);
 	}
+
 	~SpriteComponent() {
 		SDL_DestroyTexture(texture);
 	}
+
 
 	void setTex(const char* path) {
 		texture = TextureManager::LoadTexture(path);
@@ -33,6 +36,7 @@ public:
 	}
 
 	void update() override {
+
 		destRect.x = static_cast<int>(transform->position.x);
 		destRect.y = static_cast<int>(transform->position.y);
 

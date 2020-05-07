@@ -103,5 +103,8 @@
     <Image Include="wall.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="player_idle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
