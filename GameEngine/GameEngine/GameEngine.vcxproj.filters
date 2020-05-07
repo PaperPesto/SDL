@@ -16,6 +16,9 @@
     <Filter Include="Header Files\ECS">
       <UniqueIdentifier>{fa9b6ffa-1648-4e57-aeaf-0e8c8c867276}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ECS">
+      <UniqueIdentifier>{bdaa76d0-87b3-4ce5-b29d-2cb15d437c17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
@@ -41,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="Collision.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ECS.cpp">
+      <Filter>Source Files\ECS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
