@@ -106,10 +106,10 @@
     <Image Include="assets\water.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="wall.png">
+    <Image Include="assets\player_idle.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="assets\player_idle.png">
+    <Image Include="assets\wall.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
