@@ -175,8 +175,8 @@
     <Image Include="assets\enemy.png" />
     <Image Include="assets\grass.png" />
     <Image Include="assets\player.png" />
+    <Image Include="assets\player_idle.png" />
     <Image Include="assets\water.png" />
-    <Image Include="player_idle.png" />
     <Image Include="wall.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
