@@ -178,8 +178,12 @@
     <Image Include="assets\player.png" />
     <Image Include="assets\player_anims.png" />
     <Image Include="assets\player_idle.png" />
+    <Image Include="assets\terrain_ss.png" />
     <Image Include="assets\wall.png" />
     <Image Include="assets\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\map.map" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

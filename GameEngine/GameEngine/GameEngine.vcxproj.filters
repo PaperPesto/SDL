@@ -118,5 +118,11 @@
     <Image Include="assets\player_anims.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="assets\terrain_ss.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\map.map" />
   </ItemGroup>
 </Project>
