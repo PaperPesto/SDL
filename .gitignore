@@ -32,9 +32,24 @@
 *.app
 
 .vs
-x64
-x86
 
-!SDL2/lib/x64/SDL2.dll
+# SDL2
+!SDL2.dll
+!SDL2.lib
+!SDL2main.lib
+!SDL2test.lib
 
+# SDL2 image
+!libjpeg-9.dll
+!libpng16-16.dll
+!libtiff-5.dll
+!libwebp-4.dll
+!SDL2_image.dll
+!SDL2_image.lib
+!zlib1.dll
 
+# SDL2 ttf
+!libfreetype-6.dll
+!SDL2_ttf.dll
+!SDL2_ttf.lib
+!zlib1.dll
