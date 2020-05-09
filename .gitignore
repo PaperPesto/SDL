@@ -34,3 +34,7 @@
 .vs
 x64
 x86
+
+!SDL2/lib/x64/SDL2.dll
+
+
