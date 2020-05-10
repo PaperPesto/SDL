@@ -1,11 +1,18 @@
 #include <iostream>
 #include "SDL.h"
+#include "Engine.h"
 
 int main(int argc, char** argv) {
 
-	if (SDL_Init(SDL_INIT_EVERYTHING) == 0) {
+	Engine::GetInstance()->Init();
 
-		std::cout << "Working" << std::endl;
+	while (Engine::GetInstance()->IsRunning()) {
+		Engine::GetInstance()->Events();	// Hanle user input
+		Engine::GetInstance()->Update();	// Internal calculations
+		Engine::GetInstance()->Render();
 	}
+
+	Engine::GetInstance()->Clean();
+
 	return 0;
 }
