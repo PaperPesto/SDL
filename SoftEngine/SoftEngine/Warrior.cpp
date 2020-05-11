@@ -10,6 +10,7 @@ Warrior::Warrior(Properties* props) : Character(props){
 	m_FrameCount = 4;
 	m_AnimSpeed = 170;*/
 
+	m_RigidBody = new RigidBody();
 	m_Animation = new Animation();
 	m_Animation->SetProps(m_TextureID, 5, 4, 170, 3);
 }
@@ -21,6 +22,12 @@ void Warrior::Draw() {
 
 void Warrior::Update(float dt) {
 	//m_Frame = (SDL_GetTicks() / m_AnimSpeed) % m_FrameCount + m_ColumnOffset;
+	m_RigidBody->Update(0.01);
+	m_RigidBody->ApplyForceX(0);
+
+	m_Transform->TranslateX(m_RigidBody->Position().X);
+	m_Transform->TranslateY(m_RigidBody->Position().Y);
+
 	m_Animation->Update();
 }
 

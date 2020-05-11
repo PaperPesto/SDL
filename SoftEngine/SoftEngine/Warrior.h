@@ -1,6 +1,7 @@
 #pragma once
 #include "Character.h"
 #include "Animation.h"
+#include "RigidBody.h"
 
 class Warrior : public Character
 {
@@ -17,5 +18,6 @@ private:
 	int m_ColumnOffset;*/
 
 	Animation* m_Animation;
+	RigidBody* m_RigidBody;
 };
 
