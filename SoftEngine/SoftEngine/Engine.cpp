@@ -3,6 +3,7 @@
 #include "Engine.h"
 #include <iostream>
 #include "TextureManager.h"
+#include "Transform.h"
 
 Engine* Engine::s_Instance = nullptr;
 
@@ -25,6 +26,9 @@ bool Engine::Init() {
 	}
 
 	TextureManager::GetInstance()->Load("tree", "assets/tree.png");
+
+	Transform tf;
+	tf.Log();
 
 	m_IsRunning = true;
 	return m_IsRunning;
