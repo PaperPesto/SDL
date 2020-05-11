@@ -1,5 +1,6 @@
 #pragma once
 #include "Character.h"
+#include "Animation.h"
 
 class Warrior : public Character
 {
@@ -11,8 +12,10 @@ public:
 	virtual void Update(float dt);
 
 private:
-	int m_Row, m_Frame, m_FrameCount;
+	/*int m_Row, m_Frame, m_FrameCount;
 	int m_AnimSpeed;
-	int m_ColumnOffset;
+	int m_ColumnOffset;*/
+
+	Animation* m_Animation;
 };
 
