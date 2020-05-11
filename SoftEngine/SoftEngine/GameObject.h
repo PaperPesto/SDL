@@ -23,8 +23,11 @@ public:
 
 class GameObject : public IObject {
 public:
-	GameObject(Properties* props) m_TextureID(props->TextureID),
-	m_Width(prop->Width), m_Height(props->Height), m_Flip(props->Flip) {
+	GameObject(Properties* props) :
+		m_TextureID(props->TextureID),
+		m_Width(props->Width),
+		m_Height(props->Height),
+		m_Flip(props->Flip) {
 		m_Transform = new Transform(props->X, props->Y);
 	}
 
