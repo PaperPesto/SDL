@@ -39,10 +39,6 @@ bool Engine::Init() {
 }
 
 void Engine::Update() {
-	if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_A)) {
-		SDL_Log("Key A pushed!");
-	};
-
 	player->Update(0);
 }
 
