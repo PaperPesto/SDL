@@ -6,8 +6,8 @@
 #define SCREEN_WIDTH 960
 #define SCREEN_HEIGHT 640
 
-class Engine
-{
+class Engine {
+
 public:
 	static Engine* GetInstance() {
 		return s_Instance = (s_Instance != nullptr) ? s_Instance : new Engine();

@@ -34,7 +34,7 @@ void Warrior::Update(float dt) {
 		m_Animation->SetProps(m_TextureID, 1, 5, 170, 1);	// RUN
 	};
 
-
+	SDL_Log("%f", dt);
 	m_RigidBody->Update(0.6);
 
 	m_Transform->TranslateX(m_RigidBody->Position().X);

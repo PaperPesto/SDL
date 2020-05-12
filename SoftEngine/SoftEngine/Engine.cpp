@@ -6,6 +6,7 @@
 #include "Transform.h"
 #include "Warrior.h"
 #include "Input.h"
+#include "Timer.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* player = nullptr;
@@ -39,7 +40,8 @@ bool Engine::Init() {
 }
 
 void Engine::Update() {
-	player->Update(0);
+	float dt = Timer::GetInstance()->GetDeltaTime();
+	player->Update(dt);
 }
 
 void Engine::Render() {
