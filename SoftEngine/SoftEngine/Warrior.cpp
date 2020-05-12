@@ -4,8 +4,7 @@
 #include "Input.h"
 
 
-
-Warrior::Warrior(Properties* props) : Character(props){
+Warrior::Warrior(Properties* props) : Character(props) {
 	/*m_Row = 5;
 	m_ColumnOffset = 3;
 	m_FrameCount = 4;
@@ -26,12 +25,12 @@ void Warrior::Update(float dt) {
 	m_RigidBody->UnSetForce();
 
 	if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_A)) {
-		m_RigidBody->ApplyForceX(5*BACKWARD);
+		m_RigidBody->ApplyForceX(5 * BACKWARD);
 		m_Animation->SetProps(m_TextureID, 1, 5, 170, 1, SDL_FLIP_HORIZONTAL);	// RUN
 	};
 
 	if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_D)) {
-		m_RigidBody->ApplyForceX(5*FORWARD);
+		m_RigidBody->ApplyForceX(5 * FORWARD);
 		m_Animation->SetProps(m_TextureID, 1, 5, 170, 1);	// RUN
 	};
 

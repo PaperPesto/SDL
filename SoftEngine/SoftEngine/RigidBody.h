@@ -28,7 +28,7 @@ public:
 
 	// Friction
 	inline void ApplyFriction(Vector2D Fr) { m_Friction = Fr; }
-	inline void UnSetFriction() { m_Friction = Vector2D(0,0); }
+	inline void UnSetFriction() { m_Friction = Vector2D(0, 0); }
 
 	// Getters
 	inline float GetMass() { return m_Mass; }
