@@ -94,5 +94,14 @@
     <Image Include="assets\adventurer-Sheet.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="assets\TileSet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\justforlooks.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\map.tmx" />
   </ItemGroup>
 </Project>

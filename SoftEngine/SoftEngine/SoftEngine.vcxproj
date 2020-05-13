@@ -172,7 +172,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\adventurer-Sheet.png" />
+    <Image Include="assets\justforlooks.png" />
+    <Image Include="assets\TileSet.png" />
     <Image Include="assets\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\map.tmx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
