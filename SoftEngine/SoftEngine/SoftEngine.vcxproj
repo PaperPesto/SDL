@@ -149,6 +149,7 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TileLayer.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
@@ -159,8 +160,11 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="IObject.h" />
+    <ClInclude Include="Layer.h" />
+    <ClInclude Include="GameMap.h" />
     <ClInclude Include="RigidBody.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TileLayer.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Vector2D.h" />
