@@ -39,6 +39,21 @@
     <ClCompile Include="TileLayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tinyxml\tinyxmlparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxmlerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinystr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -86,6 +101,15 @@
     <ClInclude Include="TileLayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tinyxml\tinyxml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml\tinystr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\tree.png">
@@ -103,5 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\map.tmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="tinyxml\readme.txt" />
+    <Text Include="tinyxml\CMakeLists.txt" />
   </ItemGroup>
 </Project>
