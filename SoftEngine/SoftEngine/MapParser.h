@@ -10,13 +10,13 @@ public:
 	bool Load();
 	void Clean();
 
-	inline GameMap* GetMaps();
+	inline GameMap* GetMaps(std::string id) { return m_MapDict[id]; };
 	inline static MapParser* GetInstance() { return s_Instance = (s_Instance != nullptr) ? s_Instance : new MapParser(); }
 
 private:
 	bool Parse(std::string id, std::string source);
 	Tileset ParseTileset(TiXmlElement* xmlTileSet);
-	TileLayer* ParseTileLayer(TiXmlElement* xmlLayer);
+	TileLayer* ParseTileLayer(TiXmlElement* xmlLayer, TilesetList tilesets, int tilesize, int rowcount, int colcount);
 
 private:
 	MapParser();

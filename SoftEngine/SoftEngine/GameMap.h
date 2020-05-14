@@ -20,6 +20,7 @@ public:
 	std::vector<Layer*> GetMapLayers() { return m_MapLayers; }
 
 private:
+	friend class MapParser;	// ? https://youtu.be/AZ2NRGdGppg?list=PL-K0viiuJ2RctP5nlJlqmHGeh66-GOZR_&t=1464
 	std::vector<Layer*> m_MapLayers;
 };
 
