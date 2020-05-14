@@ -1,10 +1,17 @@
 #include "MapParser.h"
 
+MapParser* MapParser::s_Instance = nullptr;
+
 bool MapParser::Load() {
-	return Parse("level1", "assets/map.tmx");
+	return Parse("MAP", "assets/map.tmx");
 }
 
 void MapParser::Clean() {
+	std::map<std::string, GameMap*>::iterator it;
+	for (it = m_MapDict.begin(); it != m_MapDict.end(); it++)
+		it->second = nullptr;
+
+	m_MapDict.clear();
 }
 
 
@@ -32,7 +39,7 @@ bool MapParser::Parse(std::string id, std::string source) {
 		}
 	}
 
-	// parse òayers
+	// parse payers
 	GameMap* gamemap = new GameMap();
 	for (TiXmlElement* e = root->FirstChildElement(); e != nullptr; e = e->NextSiblingElement()) {
 		if (e->Value() == std::string("layer")) {
@@ -53,7 +60,7 @@ Tileset MapParser::ParseTileset(TiXmlElement* xmlTileSet) {
 	xmlTileSet->Attribute("tilecount", &tileset.TileCount);
 	tileset.LastID = (tileset.FirstID + tileset.TileCount) - 1;
 
-	xmlTileSet->Attribute("column", &tileset.ColCount);
+	xmlTileSet->Attribute("columns", &tileset.ColCount);
 	tileset.RowCount = tileset.TileCount / tileset.ColCount;
 	xmlTileSet->Attribute("tilewidth", &tileset.TileSize);
 

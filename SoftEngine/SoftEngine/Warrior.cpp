@@ -12,7 +12,7 @@ Warrior::Warrior(Properties* props) : Character(props) {
 
 	m_RigidBody = new RigidBody();
 	m_Animation = new Animation();
-	m_Animation->SetProps(m_TextureID, 1, 5, 170, 1);	// Run
+	m_Animation->SetProps(m_TextureID, 6, 4, 170, 3);	// IDLE
 }
 
 void Warrior::Draw() {
@@ -21,17 +21,20 @@ void Warrior::Draw() {
 
 void Warrior::Update(float dt) {
 
-	m_Animation->SetProps(m_TextureID, 5, 4, 170, 3);	// IDLE
+	/* ATTENZIONE */
+	/* Per qualche mnotivo il rendering dello srpite vuole le righe in formato matriciale (i parte da 1) */
+	/* mentre le colonne (ultimo argomento) vogliono lo zero-based */
+	m_Animation->SetProps(m_TextureID, 6, 4, 170, 3);	// IDLE
 	m_RigidBody->UnSetForce();
 
 	if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_A)) {
 		m_RigidBody->ApplyForceX(5 * BACKWARD);
-		m_Animation->SetProps(m_TextureID, 1, 5, 170, 1, SDL_FLIP_HORIZONTAL);	// RUN
+		m_Animation->SetProps(m_TextureID, 2, 5, 170, 1, SDL_FLIP_HORIZONTAL);	// RUN
 	};
 
 	if (Input::GetInstance()->GetKeyDown(SDL_SCANCODE_D)) {
 		m_RigidBody->ApplyForceX(5 * FORWARD);
-		m_Animation->SetProps(m_TextureID, 1, 5, 170, 1);	// RUN
+		m_Animation->SetProps(m_TextureID, 2, 5, 170, 1);	// RUN
 	};
 
 	SDL_Log("%f", dt);
