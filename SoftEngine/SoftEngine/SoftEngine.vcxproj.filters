@@ -54,6 +54,9 @@
     <ClCompile Include="MapParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -110,6 +113,12 @@
     <ClInclude Include="MapParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\tree.png">
@@ -122,6 +131,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\justforlooks.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\background.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

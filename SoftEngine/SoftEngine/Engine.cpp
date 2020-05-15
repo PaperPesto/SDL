@@ -9,6 +9,7 @@
 #include "Timer.h"
 #include "MapParser.h"
 #include <iostream>
+#include "Camera.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* player = nullptr;
@@ -40,10 +41,13 @@ bool Engine::Init() {
 	m_LevelMap = MapParser::GetInstance()->GetMap("MAP");
 
 	TextureManager::GetInstance()->Load("player", "assets/adventurer-Sheet.png");
+	TextureManager::GetInstance()->Load("bg", "assets/background.png");
 	player = new Warrior(new Properties("player", 100, 200, 50, 37));
 
 	Transform tf;
 	tf.Log();
+
+	Camera::GetInstance()->SetTarget(player->GetOrigin());
 
 	m_IsRunning = true;
 	return m_IsRunning;
@@ -52,14 +56,16 @@ bool Engine::Init() {
 void Engine::Update() {
 	float dt = Timer::GetInstance()->GetDeltaTime();
 
-	m_LevelMap->Update();
 	player->Update(dt);
+	m_LevelMap->Update();
+	Camera::GetInstance()->Update(dt);
 }
 
 void Engine::Render() {
 	SDL_SetRenderDrawColor(m_Renderer, 124, 218, 254, 255);	// background color
 	SDL_RenderClear(m_Renderer);
 
+	TextureManager::GetInstance()->Draw("bg", 0, 0, 1346, 580);
 	m_LevelMap->Render();
 	player->Draw();
 
