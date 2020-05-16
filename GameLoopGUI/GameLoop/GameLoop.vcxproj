@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{1E80778D-E7E7-4ADA-8508-D24290D225D9}</ProjectGuid>
-    <RootNamespace>GameEngine</RootNamespace>
+    <ProjectGuid>{365E2311-E8EC-4473-90E2-81F782E454BF}</ProjectGuid>
+    <RootNamespace>GameLoop</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -74,8 +74,6 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Projects\SDL\SDL2_image-2.0.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Projects\SDL\SDL2_image-2.0.1\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -101,13 +99,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\SDL2_image-2.0.1\include;..\..\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\SDL\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\SDL2_image-2.0.1\lib\x64;..\..\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Projects\SDL\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -143,47 +141,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <Text Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Collision.cpp" />
-    <ClCompile Include="ECS.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="TextureManager.cpp" />
-    <ClCompile Include="Vector2D.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Animation.h" />
-    <ClInclude Include="ColliderComponent.h" />
-    <ClInclude Include="Collision.h" />
-    <ClInclude Include="Components.h" />
-    <ClInclude Include="ECS.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="KeyboardController.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="TileComponent.h" />
-    <ClInclude Include="TransformComponent.h" />
-    <ClInclude Include="SpriteComponent.h" />
-    <ClInclude Include="TextureManager.h" />
-    <ClInclude Include="Vector2D.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="assets\dirt.png" />
-    <Image Include="assets\enemy.png" />
-    <Image Include="assets\grass.png" />
-    <Image Include="assets\player.png" />
-    <Image Include="assets\player_anims.png" />
-    <Image Include="assets\player_idle.png" />
-    <Image Include="assets\terrain_ss.png" />
-    <Image Include="assets\wall.png" />
-    <Image Include="assets\water.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\map.map" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
