@@ -21,6 +21,6 @@ public:
 
 private:
 	friend class MapParser;	// ? https://youtu.be/AZ2NRGdGppg?list=PL-K0viiuJ2RctP5nlJlqmHGeh66-GOZR_&t=1464
-	std::vector<Layer*> m_MapLayers;
+	std::vector<Layer*> m_MapLayers;	// Ci sono i vari layer del file xml
 };
 
